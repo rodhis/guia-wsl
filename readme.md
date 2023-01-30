@@ -6,7 +6,7 @@ O WSL2 é compatível com Windows 10 ou 11. É importante seguir os passos confo
 
 ## Passo a passo:
 
-1. Instale o WSL2 com a distro de escolha (vou usar Ubuntu (sem versão) (NOTA: corresponde à versão 22.04.1, com última atualização em 14/03/2022, sendo a mais atualizada na última edição deste documento). Para tanto, siga os passos do vídeo abaixo, que mostra a instalação completa, bem como o uso de diversos comandos que você precisará depois. É IMPORTANTE VERIFICAR ATUALIZAÇÕES TAMBÉM, como mostrado no vídeo!
+1. Instale o WSL2 com a distro de escolha. Vou usar Ubuntu (sem versão) (NOTA: corresponde à versão 22.04.1, com última atualização em 14/03/2022, sendo a mais atualizada na última edição deste documento). Para tanto, siga os passos do vídeo abaixo, que mostra a instalação completa, bem como o uso de diversos comandos que você precisará depois. É IMPORTANTE VERIFICAR ATUALIZAÇÕES TAMBÉM, como mostrado no vídeo!
    https://www.youtube.com/watch?v=o1_E4PBl30s
 
 2. Ao abrir o terminal do Linux ele te pedirá um novo nome de usuário. Este precisa ser algo como “seunome_linux” ou “nome_ubuntu” (sem as aspas) . É necessário colocar “linux” ou o nome da distro no seu usuário por ser um padrão do WSL (nota: não testei todas as combinações para saber EXATAMENTE o que é necessário, mas sei que, com nome e distro, é o suficiente). Logo após ele pedirá uma senha, que será utilizada para quase tudo do Linux. Sugiro escolher algo fácil.
