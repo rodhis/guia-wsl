@@ -1,4 +1,4 @@
-# Instalação de Windows subsystem Linux (WSL) 2 (v.1.0)
+# Instalação de Windows subsystem for Linux (WSL) 2 (v.1.0)
 
 O WSL é uma ferramenta que permite uma distro Linux rodar como um subsistema dentro do seu Windows, lhe dando acesso ao seu terminal e todas as suas funcionalidades, como git, npm, yarn, node.js e por aí vai, sem precisar instalar arquivos adicionais em seu Windows.
 
