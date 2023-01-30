@@ -6,7 +6,7 @@ O WSL2 é compatível com Windows 10 ou 11. É importante seguir os passos confo
 
 ## Passo a passo:
 
-1. Instale o WSL2 com a distro de escolha (para uso no bootcamp FS JS TEX, recomendo Ubuntu (sem versão) (NOTA: corresponde à versão 22.04.1, com última atualização em 14/03/2022, sendo a mais atualizada no momento que escrevi este documento). Para tanto, siga os passos do vídeo abaixo, que mostra a instalação completa, bem como o uso de diversos comandos que você precisará depois. É IMPORTANTE VERIFICAR ATUALIZAÇÕES TAMBÉM, como mostrado no vídeo!
+1. Instale o WSL2 com a distro de escolha (vou usar Ubuntu (sem versão) (NOTA: corresponde à versão 22.04.1, com última atualização em 14/03/2022, sendo a mais atualizada na última edição deste documento). Para tanto, siga os passos do vídeo abaixo, que mostra a instalação completa, bem como o uso de diversos comandos que você precisará depois. É IMPORTANTE VERIFICAR ATUALIZAÇÕES TAMBÉM, como mostrado no vídeo!
    https://www.youtube.com/watch?v=o1_E4PBl30s
 
 2. Ao abrir o terminal do Linux ele te pedirá um novo nome de usuário. Este precisa ser algo como “seunome_linux” ou “nome_ubuntu” (sem as aspas) . É necessário colocar “linux” ou o nome da distro no seu usuário por ser um padrão do WSL (nota: não testei todas as combinações para saber EXATAMENTE o que é necessário, mas sei que, com nome e distro, é o suficiente). Logo após ele pedirá uma senha, que será utilizada para quase tudo do Linux. Sugiro escolher algo fácil.
@@ -32,7 +32,7 @@ O WSL2 é compatível com Windows 10 ou 11. É importante seguir os passos confo
 
 ## Cuidados importantes:
 
-a) Evite usar comandos do Windows (Ctrl c, del, clique direito etc.) para mexer nas pastas que contém os diretórios do WSL. Isso costuma dar erros de permissão. Use o terminal do Linux.
+a) Evite usar comandos do Windows (Ctrl + c, Shift + del, clique direito etc.) para mexer nas pastas que contém os diretórios do WSL. Isso costuma dar erros de permissão. Use o terminal do Linux.
 
 b) Clone seus repositórios do GitHub ao invés de copiar e colar de um backup em disco ou nuvem. Isso evita erros de permissão com o Git também.
 
@@ -42,13 +42,13 @@ d) Não é necessário instalar Git no Windows com esse método!
 
 ## Eliminando arquivos Zone.identifier
 
-Ao usar WSL muitos desses arquivos podem aparecer quando você baixa ou cola arquivos na sua pasta Linux. Eles servem para identificar a fonte de origem, mas, fora isto, apenas bagunçam tudo. Para resolver este problema:
+Ao usar WSL muitos desses arquivos podem aparecer quando você baixa ou cola arquivos na sua pasta Linux. Eles servem para identificar a fonte de origem de cada arquivo copiado, mas, fora isto, apenas bagunçam tudo. Para resolver este problema:
 
 a) Use o atalho do Windows “Win + R” e digite na caixa de executar <pre>gpedit.msc</pre>
 
 b) Siga o caminho: Configuração de Usuário -> Modelos administrativos -> Componentes do Windows -> Gerenciador de Anexos.
 
-c) Clique duas vezes em “Não preservar informações de zona em anexos de arquivos”;
+c) Clique duas vezes em “<u>Não preservar informações de zona em anexos de arquivos</u>”;
 
 d) Marque a opção **“habilitado”**.
 
@@ -64,7 +64,7 @@ Substitua "pasta alvo" pelo caminho onde estão seus arquivos.
 
 Para utilizar a extensão Live Server, podem ser necessárias configurações adicionais para que esta funcione. Siga os passos:
 
-a) Vá em Extension Settings do Live Server. Logo no início estará a opção “<u>Advance Custom Broswer Cmd Line</u>”. Clique em "<u>Edit in settings.json</u>"".
+a) Vá em Extension Settings do Live Server. Logo no início estará a opção “<u>Advance Custom Browser Cmd Line</u>”. Clique em "<u>Edit in settings.json</u>"".
 
 b) Na nova janela que se abrir, adicione ou edite as linhas antes do último fechamento com chave } :
 
@@ -76,7 +76,7 @@ Vai ficar algo assim: <br />
 
 <img src="./md-2.png" alt="vscode ok"/><br />
 
-Note que esta configuração é para abrir com o Chrome. Para outros navegadores, é necessário editar o CustomBrowser e indicar o caminho específico de seu executável na linha de baixo.
+Note que esta configuração é para abrir com o Chrome. Para outros navegadores, é necessário editar o CustomBrowser e indicar o caminho específico de seu executável na AdvanceCustomBrowser(...).
 
 ## Gerenciador de pacotes, SASS, Vue, Node.js e outros:
 
