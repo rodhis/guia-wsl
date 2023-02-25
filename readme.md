@@ -103,6 +103,80 @@ Estes recursos de programação são instalados via gerenciadores de pacotes, co
 
   NOTA: Se acontecerem erros de console na instalação de alguns desses, use **sudo** antes dos comandos para remover as necessidades de permissão de acesso.
 
+## MySQL Server e Workbench
+
+Alguns comandos do Linux não ficam disponíveis no WSL. Siga os passos para utilizar de acordo: <br /> <br />
+
+### <u>MySQL Server</u> <br /> <br />
+
+1- Instale o Server em seu terminal WSL com o comando:
+  <pre>sudo apt-get install mysql-server </pre>
+
+E confirme a instalação com <pre>mysql --version </pre>
+
+2- Inicie o servidor MySQL com o comando:
+
+  <pre>sudo /etc/init.d/mysql start</pre>
+  (stop encerra o servidor)<br /> <br />
+
+3- Faça as configurações de segurança. Use o comando:
+
+<pre> sudo mysql_secure_installation </pre>
+
+Alguns pedidos de resposta surgirão. Sâo eles:
+
+- Usar o componente de validação de senhas? Digite <b>n</b>
+- Senha do root: Digite sua senha para acesso root (padrão), aqui, aperte enter e repita a senha, apertando enter novamente.
+- Remover usuários anônimos: digite <b>y</b>
+- Não permitir login remoto: digite <b>n</b>
+- Remover db de teste: digite <b>n</b>
+- Recarregar privilégios: digite <b>y</b>
+
+4- Para abrir o editor MySQL no terminal, digite:
+<pre>sudo mysql -p </pre>
+Digite a senha do usuário root, e tecle enter. Requer que o servidor esteja rodando <b>(passo 2)</b>.
+
+5- Para confirmar que tudo está ok, coloque o comando no editor MySQL:
+
+<pre> SHOW DATABASES; </pre>
+
+Se 4 tabelas aparecerem, a instalação foi bem sucedida. <br /> <br />
+
+### <u>Permitir acesso remoto e simplificado </u><br /><br />
+
+-No editor MySQL, rode:
+
+<pre>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';</pre>
+No lugar de 'root', coloque a senha setada no passo 3. <br /> <br />
+
+### <u>Iniciar servidor MySQL com o WSL </u><br /> <br />
+
+No terminal WSL, use o comando:
+
+<pre>sudo update-rc.d mysql defaults</pre>
+
+Isso iniciará o servidor sempre que o WSL estiver aberto, evitando de ter sempre que colocar o comando do item 2 (sessão de instalação).<br /> <br />
+
+### <u> MySQL Workbench </u> <br /> <br />
+
+1- Faça o download do aplicativo para <b>Windows</b> e proceda com sua instalação normal.
+
+2- Abra o aplicativo, siga o caminho 'Database - Manage connections'.
+
+3- Clique em 'New'.
+
+4- Em 'Connection Name', dê seu nome de escolha para a conexão.
+
+5- Na aba 'Parameters', certifique-se de que o username está root. Clique em 'Store in Vault' e coloque o password que você setou na configuração do Server no terminal.
+
+6- Na aba 'system profile', certifique-se de que o System Type esteja como "FreeBSD".
+
+7- Tenha certeza de que o servidor MySQL está rodando  no WSL (ver sessão de instalação) e clique em "Test connection". Se estiver ok, pode clicar em close.
+
+8- Sua conexão deve aparecer na tela inicial do Workbench, e você só precisará clicá-la para acessar (lembre-se, o servidor precisa estar rodando no WSL).
+
+### 
+
   ## Extras:
 
   a) Use o Windows Terminal como indicado no vídeo. Clique na setinha ao lado do indicador de janela do terminal que está aberto, vá em configurações. Em <u>Inicialização</u>, você pode colocar para abrir diretamente o terminal WSL. Em <u>Padrões</u>, pode colocar para sempre abrir como administrador, o que economiza tempo.
