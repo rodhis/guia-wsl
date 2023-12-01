@@ -68,15 +68,21 @@ a) Vá em Extension Settings do Live Server. Logo no início estará a opção �
 
 b) Na nova janela que se abrir, adicione ou edite as linhas antes do último fechamento com chave } :
 
-<pre>• "liveServer.settings.CustomBrowser": "chrome",
+###Chrome
+<pre>"liveServer.settings.CustomBrowser": "chrome",
 
-• "liveServer.settings.AdvanceCustomBrowserCmdLine": "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe",</pre>
+"liveServer.settings.AdvanceCustomBrowserCmdLine": "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"</pre>
 
 Vai ficar algo assim: <br />
 
 <img src="./md-2.png" alt="vscode ok"/><br />
 
-Note que esta configuração é para abrir com o Chrome. Para outros navegadores, é necessário editar o CustomBrowser e indicar o caminho específico de seu executável na AdvanceCustomBrowser(...).
+###Edge:
+
+<pre>  "liveServer.settings.CustomBrowser": "microsoft-edge",
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"</pre>
+   
+Para outros navegadores, é necessário editar o CustomBrowser e indicar o caminho específico de seu executável na AdvanceCustomBrowser(...).
 
 ## Gerenciador de pacotes, SASS, Vue, Node.js e outros:
 
