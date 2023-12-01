@@ -68,7 +68,7 @@ a) Vá em Extension Settings do Live Server. Logo no início estará a opção �
 
 b) Na nova janela que se abrir, adicione ou edite as linhas antes do último fechamento com chave } :
 
-###Chrome
+### Chrome
 <pre>"liveServer.settings.CustomBrowser": "chrome",
 
 "liveServer.settings.AdvanceCustomBrowserCmdLine": "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"</pre>
@@ -77,7 +77,7 @@ Vai ficar algo assim: <br />
 
 <img src="./md-2.png" alt="vscode ok"/><br />
 
-###Edge:
+### Edge:
 
 <pre>  "liveServer.settings.CustomBrowser": "microsoft-edge",
     "liveServer.settings.AdvanceCustomBrowserCmdLine": "/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"</pre>
